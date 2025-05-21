@@ -1,17 +1,42 @@
 import { useState } from "react";
 
-function Square({ value, onSquareClick }) {
+const initialBoard = Array(9).fill(null);
+
+export default function Game() {
+  const [history, setHistory] = useState([initialBoard]);
+  const [currentMove, setCurrentMove] = useState(0);
+
+  const currentSquares = history[currentMove];
+  const xIsNext = currentMove % 2 === 0;
+
+  function handlePlay(nextSquares) {
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
+  }
+
+  const moves = history.map((_, move) => {
+    return (
+      <li key={move}>
+        <button onClick={() => setCurrentMove(move)}>Rewind</button>
+      </li>
+    );
+  });
+
   return (
-    <button className="square" onClick={onSquareClick}>
-      {value}
-    </button>
+    <div className="game">
+      <div className="game-board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <h4>Move history</h4>
+        <ol>{moves}</ol>
+      </div>
+    </div>
   );
 }
 
-export default function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
-
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (determineWinner(squares) || squares[i]) {
       return;
@@ -19,8 +44,7 @@ export default function Board() {
 
     const nextSquares = squares.slice();
     nextSquares[i] = xIsNext ? "X" : "O";
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   }
 
   const winner = determineWinner(squares);
@@ -33,7 +57,7 @@ export default function Board() {
 
   return (
     <>
-      <div className="status">{status}</div>
+      <h4>{status}</h4>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -50,6 +74,14 @@ export default function Board() {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </>
+  );
+}
+
+function Square({ value, onSquareClick }) {
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
   );
 }
 
