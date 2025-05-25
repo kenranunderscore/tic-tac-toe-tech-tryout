@@ -1,0 +1,8 @@
+{
+    "name": "tic-tac-toe-tech-tryout",
+    "private": true,
+    "workspaces" : [
+        "react-js-spa",
+        "svelte-js-spa"
+    ]
+}
