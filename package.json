@@ -2,6 +2,7 @@
     "name": "tic-tac-toe-tech-tryout",
     "private": true,
     "workspaces" : [
+        "ttt-js",
         "react-js-spa",
         "svelte-js-spa"
     ]
