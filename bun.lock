@@ -32,6 +32,9 @@
     "svelte-js-spa": {
       "name": "svelte-js-spa",
       "version": "0.0.0",
+      "dependencies": {
+        "ttt-js": "workspace:*",
+      },
       "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^5.0.3",
         "svelte": "^5.28.1",

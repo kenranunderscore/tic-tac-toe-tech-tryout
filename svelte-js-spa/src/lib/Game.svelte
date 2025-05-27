@@ -1,8 +1,9 @@
 <script>
   import Board from "./Board.svelte";
   import History from "./History.svelte";
+  import * as ttt from "ttt-js";
 
-  const initialBoard = Array(9).fill(null);
+  const initialBoard = ttt.createInitialBoard();
 
   let history = $state([initialBoard]);
   let currentMove = $state(0);
