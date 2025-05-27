@@ -1,9 +1,14 @@
 {
     "name": "tic-tac-toe-tech-tryout",
     "private": true,
-    "workspaces" : [
+    "workspaces": [
         "ttt-js",
         "react-js-spa",
         "svelte-js-spa"
-    ]
+    ],
+    "devDependencies": {
+        "prettier": "^3.5.3",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-svelte": "^3.4.0"
+    }
 }

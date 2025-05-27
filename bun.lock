@@ -3,6 +3,11 @@
   "workspaces": {
     "": {
       "name": "tic-tac-toe-tech-tryout",
+      "devDependencies": {
+        "prettier": "^3.5.3",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-svelte": "^3.4.0",
+      },
     },
     "react-js-spa": {
       "name": "react-js-spa",
@@ -21,8 +26,6 @@
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^16.0.0",
-        "prettier": "^3.5.3",
-        "prettier-plugin-organize-imports": "^4.1.0",
         "vite": "^6.3.5",
       },
     },
@@ -31,8 +34,6 @@
       "version": "0.0.0",
       "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^5.0.3",
-        "prettier-plugin-organize-imports": "^4.1.0",
-        "prettier-plugin-svelte": "^3.4.0",
         "svelte": "^5.28.1",
         "vite": "^6.3.5",
       },
