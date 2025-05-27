@@ -1,9 +1,8 @@
 import { useState } from "react";
-
-const initialBoard = Array(9).fill(null);
+import * as ttt from "ttt-js";
 
 export default function Game() {
-  const [history, setHistory] = useState([initialBoard]);
+  const [history, setHistory] = useState([ttt.createInitialBoard()]);
   const [currentMove, setCurrentMove] = useState(0);
 
   const currentSquares = history[currentMove];
@@ -38,7 +37,7 @@ export default function Game() {
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    if (determineWinner(squares) || squares[i]) {
+    if (ttt.determineWinner(squares) || squares[i]) {
       return;
     }
 
@@ -47,7 +46,7 @@ function Board({ xIsNext, squares, onPlay }) {
     onPlay(nextSquares);
   }
 
-  const winner = determineWinner(squares);
+  const winner = ttt.determineWinner(squares);
   let status;
   if (winner) {
     status = "Winner: " + winner;
@@ -83,26 +82,4 @@ function Square({ value, onSquareClick }) {
       {value}
     </button>
   );
-}
-
-function determineWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] == squares[b] && squares[a] == squares[c]) {
-      return squares[a];
-    }
-  }
-
-  return null;
 }
