@@ -14,13 +14,14 @@ export default function App() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  const moves = history().map((_, move) => {
-    return (
-      <li key={move}>
-        <button onClick={() => setCurrentMove(move)}>Rewind</button>
-      </li>
-    );
-  });
+  const moves = () =>
+    history().map((_, move) => {
+      return (
+        <li key={move}>
+          <button onClick={() => setCurrentMove(move)}>Rewind</button>
+        </li>
+      );
+    });
 
   return (
     <div class="game">
@@ -29,7 +30,7 @@ export default function App() {
       </div>
       <div class="game-info">
         <h4>Move history</h4>
-        <ol>{moves}</ol>
+        <ol>{moves()}</ol>
       </div>
     </div>
   );
