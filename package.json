@@ -4,6 +4,7 @@
     "workspaces": [
         "ttt-js",
         "react-js-spa",
+        "solid-js-spa",
         "svelte-js-spa"
     ],
     "devDependencies": {
