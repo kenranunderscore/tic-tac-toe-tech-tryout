@@ -1,18 +1,18 @@
 {
-    "name": "tic-tac-toe-tech-tryout",
-    "private": true,
-    "workspaces": [
-        "ttt-js",
-        "tic-tac-toe-ts",
-        "react-js-spa",
-        "solid-js-spa",
-        "solid-ts-spa",
-        "svelte-js-spa"
-    ],
-    "devDependencies": {
-        "prettier": "^3.5.3",
-        "prettier-plugin-organize-imports": "^4.1.0",
-        "prettier-plugin-svelte": "^3.4.0",
-        "typescript-language-server": "^4.3.4"
-    }
+  "name": "tic-tac-toe-tech-tryout",
+  "private": true,
+  "workspaces": [
+    "ttt-js",
+    "tic-tac-toe-ts",
+    "react-js-spa",
+    "solid-js-spa",
+    "solid-ts-spa",
+    "svelte-js-spa"
+  ],
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-svelte": "^3.4.0",
+    "typescript-language-server": "^4.3.4"
+  }
 }

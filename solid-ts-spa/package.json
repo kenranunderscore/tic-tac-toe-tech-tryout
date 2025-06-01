@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "tic-tac-toe-ts": "workspace:*",
+    "tic-tac-toe-ts": "^0.0.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-solid": "^2.11.6"

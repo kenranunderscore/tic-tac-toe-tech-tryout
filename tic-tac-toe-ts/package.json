@@ -1,10 +1,8 @@
 {
   "name": "tic-tac-toe-ts",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "peerDependencies": {
     "typescript": "^5"
   }

@@ -14,6 +14,6 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "ttt-js": "workspace:*"
+    "ttt-js": "^0.0.0"
   }
 }
