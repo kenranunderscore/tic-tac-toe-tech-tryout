@@ -1,5 +1,5 @@
 import { createSignal, type Component } from "solid-js";
-import * as ttt from "tic-tac-toe-ts";
+import * as ttt from "tic-tac-toe";
 
 const App: Component = () => {
   const [history, setHistory] = createSignal<ttt.History>([ttt.createInitialBoard()]);

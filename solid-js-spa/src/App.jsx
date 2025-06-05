@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import * as ttt from "ttt-js";
+import * as ttt from "tic-tac-toe";
 
 export default function App() {
   const [history, setHistory] = createSignal([ttt.createInitialBoard()]);

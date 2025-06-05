@@ -1,9 +1,0 @@
-{
-  "name": "tic-tac-toe-ts",
-  "version": "0.0.0",
-  "module": "index.ts",
-  "type": "module",
-  "peerDependencies": {
-    "typescript": "^5"
-  }
-}

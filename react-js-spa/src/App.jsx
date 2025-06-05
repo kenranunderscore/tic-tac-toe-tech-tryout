@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as ttt from "ttt-js";
+import * as ttt from "tic-tac-toe";
 
 export default function Game() {
   const [history, setHistory] = useState([ttt.createInitialBoard()]);

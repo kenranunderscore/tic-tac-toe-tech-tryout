@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "solid-js": "^1.9.5",
-    "ttt-js": "^0.0.0"
+    "tic-tac-toe": "^0.0.0"
   },
   "devDependencies": {
     "vite": "^6.3.5",

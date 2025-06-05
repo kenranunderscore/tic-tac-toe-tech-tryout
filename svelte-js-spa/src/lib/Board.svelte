@@ -1,6 +1,6 @@
 <script>
   import Square from "./Square.svelte";
-  import * as ttt from "ttt-js";
+  import * as ttt from "tic-tac-toe";
 
   let { squares, xIsNext, onPlay } = $props();
 

@@ -14,6 +14,6 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "ttt-js": "^0.0.0"
+    "tic-tac-toe": "^0.0.0"
   }
 }

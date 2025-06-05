@@ -1,0 +1,17 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.0",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

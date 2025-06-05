@@ -1,7 +1,7 @@
 <script>
   import Board from "./Board.svelte";
   import History from "./History.svelte";
-  import * as ttt from "ttt-js";
+  import * as ttt from "tic-tac-toe";
 
   const initialBoard = ttt.createInitialBoard();
 

@@ -1,9 +1,0 @@
-{
-  "name": "ttt-js",
-  "version": "0.0.0",
-  "module": "index.js",
-  "type": "module",
-  "peerDependencies": {
-    "typescript": "^5"
-  }
-}
