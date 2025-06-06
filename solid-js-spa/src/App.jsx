@@ -24,15 +24,18 @@ export default function App() {
     });
 
   return (
-    <div class="game">
-      <div class="game-board">
-        <Board xIsNext={xIsNext()} squares={currentSquares()} onPlay={handlePlay} />
+    <>
+      <h1>Tic Tac Toe with Solid and JavaScript</h1>
+      <div class="game">
+        <div class="game-board">
+          <Board xIsNext={xIsNext()} squares={currentSquares()} onPlay={handlePlay} />
+        </div>
+        <div class="game-info">
+          <h4>Move history</h4>
+          <ol>{moves()}</ol>
+        </div>
       </div>
-      <div class="game-info">
-        <h4>Move history</h4>
-        <ol>{moves()}</ol>
-      </div>
-    </div>
+    </>
   );
 }
 
